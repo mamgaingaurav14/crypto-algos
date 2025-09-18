@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-#include "crypto.h"
+#include "rsa.h"
+#include "../math.h"
 using namespace std;
 
 void print_vec(vector<long long > vec){
@@ -7,19 +8,26 @@ void print_vec(vector<long long > vec){
    cout<<endl;
 }
 
-
 int main(){
 
+
+//selecting input values 
 long long p = 101;      // a prime
 long long q = 103;      // large prime
 long long e = 19;       //public key less than phi(n)
+   
     RSA obj1(p,q,e);
-
     string og="hello world!!";
-    vector<long long> ci=obj1.encrypt(og);
-    cout<<og<<endl<<" cipher blocks ";
-    print_vec(ci);
-    string rec=obj1.decrypt(ci);
-    cout<<rec<<"  revert back"<<endl;
 
+//calculation of cipher blocks
+    vector<long long> cipher_blocks=obj1.encrypt(og);
+    string res=obj1.decrypt(cipher_blocks);
+
+//print outs 
+    cout<<"original string  " << (og)<<endl;
+    print_vec(cipher_blocks);
+    cout<<"cipher->string  " << (res)<<endl;
+
+
+//we can check whether original string and cypher string are equal 
 }

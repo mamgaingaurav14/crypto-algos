@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include "crypto.h"
-
+#include "rsa.h"
+#include "../math.h"
 using namespace std;
 
 vector<long long> stringToBlocks(const string msg) {

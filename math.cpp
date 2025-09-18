@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "crypto.h"
+#include "math.h"
 
 using namespace std;
 

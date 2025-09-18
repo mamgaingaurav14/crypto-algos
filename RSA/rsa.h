@@ -1,14 +1,8 @@
-#ifndef CRYPTO_H  
-#define CRYPTO_H
+#ifndef RSA_H  
+#define RSA_H
 
 #include <bits/stdc++.h>
 using namespace std;
-
-//math functions
-long long modExp(long long a, long long b, long long mod);
-long long gcd(long long a, long long b);
-long long modInverse(long long a, long long b);
-
 
 //encryption decrption string conversion function
 string blocksToString(const vector<long long> blocks);
