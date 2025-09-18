@@ -18,7 +18,7 @@ rsa/
 ├── rsa.cpp # Core RSA class implementation
 ├── conversion.cpp # Message ↔ block conversion
 ├── main.cpp # Driver code for testing
-├── crypto.h # RSA class and function declarations
+├── rsha.h # RSA headers and function declarations
 └── README.md # This file
 
 ```
@@ -29,7 +29,7 @@ From the project terminal in sub repo RSA:
 
 bash
 ```
-g++ *.cpp -o main && ./main
+g++ -std=c++17 ../math.cpp *.cpp -o main && ./main
 
 or simply ./run.sh (script)
 
